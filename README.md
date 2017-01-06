@@ -4,7 +4,7 @@
 
 ### Format
 ```bash
-$ [command] <elasticsearch_server_ip> <indice_name_to_be_created>
+$ [command] <elasticsearch_server_ip> <indice_name_to_be_used>
 ```
 
 ```bash
