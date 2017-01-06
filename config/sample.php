@@ -3,7 +3,7 @@
 return [
     'elasticsearch' => [
         'hosts'     => ['127.0.0.1:9200'],
-        'db_name'   => 'sm_stats',
+        'db_name'   => 'fb_pages',
         'options'   => []
     ],
     'root' => 'https://www.socialbakers.com/statistics/facebook/pages/total',
