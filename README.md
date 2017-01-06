@@ -8,8 +8,8 @@ $ [command] <elasticsearch_server_ip> <indice_name_to_be_used>
 ```
 
 ```bash
-$ bin/create 127.0.0.1 fb_stats 
-$ bin/links 127.0.0.1 fb_stats 
+$ bin/create 127.0.0.1 fb_pages 
+$ bin/links 127.0.0.1 fb_pages 
 ```
 
 ## Get links and persist to Elasticsearch
