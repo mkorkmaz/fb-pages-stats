@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+echo
+echo "Creating links mapping... "
+curl -XPOST http://$1:9200/$2/_mapping/links -d '{
+    "links" : {
+        "properties" : {
+            "industry" : {
+                "type" : "string"
+            },
+            "industry_slug" : {
+                "type" : "string",
+                "index" : "not_analyzed"
+            },
+            "country" : {
+                "type" : "string"
+            },
+            "country_slug" : {
+                "type" : "string",
+                "index" : "not_analyzed"
+            },
+            "link" : {
+                "type" : "string",
+                "index" : "not_analyzed"
+            },
+            "created_at" : {
+                "type" : "date"
+            },
+            "is_active" : {
+                "type" : "long"
+            },
+            "is_deleted" : {
+                "type" : "long"
+            }
+        }
+    }
+}'

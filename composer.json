@@ -1,0 +1,31 @@
+{
+
+  "name": "mkorkmaz/fps",
+  "type": "library",
+  "description": "Collects data from socialbakers.com.",
+  "keywords": ["utility", "socialbakers"],
+  "homepage": "https://github.com/mkorkmaz/fb-pages-stats",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mehmet Korkmaz",
+      "email": "mehmet@mkorkmaz.com",
+      "homepage": "https://mkorkmaz.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/console": "^3.2",
+    "soupmix/elasticsearch": "^0.7",
+    "monolog/monolog": "^1.22",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    },
+    "files" : [
+            "src/bootstrap.php"
+    ]
+  }
+}

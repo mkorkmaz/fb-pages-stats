@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+ini_set('date.timezone', 'Europe/Istanbul');
+require dirname(__DIR__).'/vendor/autoload.php';
+
+if (file_exists(dirname(__DIR__) . '/config/production.php')) {
+    $config = require dirname(__DIR__) . '/config/production.php';
+}
+else {
+    $config = require dirname(__DIR__) . '/config/sample.php';
+
+}
+$provider = bootstrap($config);
+
+/**
+ * Get Application and then run
+ */
+
+$application = getApplication('Socialbakers Data Collector', '1.0RC');
+$application->run();

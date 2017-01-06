@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl -XDELETE http://$1:9200/$2

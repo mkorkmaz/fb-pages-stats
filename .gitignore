@@ -1,0 +1,6 @@
+.DS_store
+vendor/
+.idea/
+config/production.php
+logs/*
+composer.lock
