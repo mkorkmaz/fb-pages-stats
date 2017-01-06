@@ -17,3 +17,7 @@ $ bin/links 127.0.0.1 fb_pages
 ```bash
 $ bin/console links:get -v 
 ```
+
+## Todo
+
+- Collect data from aggregated links and insert into stats collection.
