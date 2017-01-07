@@ -18,6 +18,8 @@ $ bin/links 127.0.0.1 fb_pages
 $ bin/console links:get -v 
 ```
 
-## Todo
+## Get stats and persist to Elasticsearch
 
-- Collect data from aggregated links and insert into stats collection.
+```bash
+$ bin/console stats:update_all -v 
+```
