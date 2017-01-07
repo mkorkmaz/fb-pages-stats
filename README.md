@@ -1,5 +1,7 @@
 # fb-pages-stats
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0714cae47bcc42fda5b6abfeebc65e0a)](https://www.codacy.com/app/mehmet/fb-pages-stats?utm_source=github.com&utm_medium=referral&utm_content=mkorkmaz/fb-pages-stats&utm_campaign=badger)
+
 ## Create indice and put mapping on Elasticsearch
 
 ### Format
