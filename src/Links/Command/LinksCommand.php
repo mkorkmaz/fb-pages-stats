@@ -4,7 +4,7 @@
  * PHP version 7
  *
  * @category Command
- * @package  Users
+ * @package  Links
  * @author   Mehmet Korkmaz <mehmet@mkorkmaz.com>
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     https://github.com/mkorkmaz/social-media-stats
@@ -43,7 +43,7 @@ class LinksCommand extends Command
     protected function configure()
     {
         $this
-            // the name of the command (the part after "bin/sma")
+            // the name of the command (the part after "bin/console")
             ->setName('links:get')
             // the short description shown while running "php bin/sma list"
             ->setDescription('Gets links from socialbreakers.com.')
@@ -141,25 +141,10 @@ class LinksCommand extends Command
                 if (empty($country[1])) {
                     $country_slug = 'all';
                 } else {
-                    $country_slug = $country[1];
+                    $country_slug = $country[0];
                 }
-                $this->linksModel->add($industry[2], $industry[1], $country[1], $country_slug, $withIndustryLink);
+                $this->linksModel->add($industry[1], trim($industry[2],"/"), $country[1],$country_slug, $withIndustryLink);
             }
         }
-    }
-
-    private function runTwitterUserStatsCommand(string $twitterUserName)
-    {
-        $command = $this->getApplication()->find('twitter:user_stats');
-        $arguments = array(
-            'command'   => 'twitter:user_stats',
-            'username'  => $twitterUserName,
-            '--return'  => 1
-        );
-        $userStatsInput = new ArrayInput($arguments);
-        $buffer = new BufferedOutput();
-        $command->run($userStatsInput, $buffer);
-        $content = $buffer->fetch();
-        return json_decode(trim($content), true);
     }
 }

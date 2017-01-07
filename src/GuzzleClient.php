@@ -17,7 +17,11 @@ class GuzzleClient
 
     public function request(string $method, string $uri, array $headers = [], array $body = null)
     {
-        $request    = new Request($method, $uri, $headers, $body, '1.1');
+        $guzzleHeaders = [
+            'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0',
+            'allow_redirects' => false
+        ];
+        $request    = new Request($method, $uri, array_merge($headers, $guzzleHeaders), $body, '1.1');
         $response   = $this->client->send($request);
         $exception  = null;
         $response_code = $response->getStatusCode();
