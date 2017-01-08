@@ -6,14 +6,16 @@ curl -XPOST http://{$1}:9200/{$2}/_mapping/stats -d '
     "stats" : {
         "properties" : {
             "industry" : {
-                "type" : "string"
+                "type" : "string",
+                "fielddata": true
             },
             "industry_slug" : {
                 "type" : "string",
                 "index" : "not_analyzed"
             },
             "country" : {
-                "type" : "string"
+                "type" : "string",
+                "fielddata": true
             },
             "country_slug" : {
                 "type" : "string",
